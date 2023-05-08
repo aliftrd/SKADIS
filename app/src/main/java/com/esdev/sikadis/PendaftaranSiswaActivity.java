@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.ImageButton;
 
 import java.util.Calendar;
 
@@ -22,6 +23,9 @@ public class PendaftaranSiswaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pendaftaran_siswa);
+
+        ImageButton backButton = findViewById(R.id.imageView3);
+        backButton.setOnClickListener(view -> onBackPressed());
 
         tanggalLahireditText = findViewById(R.id.tanggal_lahir_edittext);
 
