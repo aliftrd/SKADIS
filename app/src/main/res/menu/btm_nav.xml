@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_beranda"
+        android:icon="@drawable/ic_home"
+        android:title="Beranda" />
+    <item
+        android:id="@+id/menu_pendaftaran"
+        android:icon="@drawable/ic_notebook"
+        android:title="Pendaftaran" />
+
+    <item
+        android:id="@+id/menu_raport"
+        android:icon="@drawable/ic_notebook"
+        android:title="Raport" />
+
+    <item
+        android:id="@+id/menu_layanan"
+        android:icon="@drawable/ic_phone"
+        android:title="Layanan" />
+
+</menu>
