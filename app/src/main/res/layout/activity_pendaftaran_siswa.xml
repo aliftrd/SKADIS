@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PPDBClosedActivity">
+
+        <ImageButton
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="333dp"
+            android:background="@color/white"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pendaftaran_siswa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="PENDAFTARAN SISWA"
+            android:textColor="#2D314C"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/guideline3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:id="@+id/linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingLeft="30sp"
+                android:paddingRight="30dp"
+                android:paddingBottom="40dp"
+                app:layout_constraintBottom_toTopOf="@id/guideline3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/guideline3"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:id="@+id/nik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="NIK"
+                    android:textColor="#2D314C"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/nikField"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:width="315sp"
+                    android:height="50sp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:inputType="number"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp" />
+
+                <TextView
+                    android:id="@+id/nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Nama Lengkap"
+                    android:textColor="#2D314C"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/nama_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:width="315sp"
+                    android:height="50sp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp" />
+
+                <TextView
+                    android:id="@+id/tempat_lahir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Tempat Lahir"
+                    android:textColor="#2D314C"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/tempat_lahir_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:width="315sp"
+                    android:height="50sp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp" />
+
+                <TextView
+                    android:id="@+id/tanggal_lahir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Tanggal Lahir"
+                    android:textColor="#2D314C"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/tanggal_lahir_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Pilih Tanggal Lahir"
+                    android:inputType="none"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:textColorHint="#A3A6B9"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/jenis_kelamin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Jenis Kelamin"
+                    android:textColor="#2D314C"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/gender_radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_button_laki_laki"
+                        android:layout_width="wrap_content"
+                        android:layout_height="26dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Laki-laki" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_perempuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="26dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Perempuan" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/agama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Agama"
+                    android:textColor="#2D314C"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_agama"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:fontFamily="@font/poppins"
+                    android:paddingLeft="6dp"
+                    android:textColor="#A3A6B9" />
+
+                <TextView
+                    android:id="@+id/nama_ayah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Nama Ayah"
+                    android:textColor="#2D314C"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/namaAyahField"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:width="315sp"
+                    android:height="50sp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp" />
+
+                <TextView
+                    android:id="@+id/pekerjaanAyah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Pekerjaan Ayah"
+                    android:textColor="#2D314C"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/pekerjaanAyahField"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:width="315sp"
+                    android:height="50sp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp" />
+
+                <TextView
+                    android:id="@+id/namaIbu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Nama Ibu"
+                    android:textColor="#2D314C"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/namaIbuField"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:width="315sp"
+                    android:height="50sp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp" />
+
+                <TextView
+                    android:id="@+id/pekerjaanIbu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Pekerjaan Ibu (Opsional)"
+                    android:textColor="#2D314C"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/pekerjaanIbuField"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:width="315sp"
+                    android:height="50sp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp" />
+
+                <TextView
+                    android:id="@+id/alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Alamat"
+                    android:textColor="#2D314C"
+                    android:textSize="16sp"
+                    android:layout_marginTop="13dp"/>
+
+                <EditText
+                    android:id="@+id/alamatField"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:width="315sp"
+                    android:height="50sp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp" />
+
+                <TextView
+                    android:id="@+id/namaWali"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Nama Wali (Opsional)"
+                    android:textColor="#2D314C"
+                    android:textSize="16sp"
+                    android:layout_marginTop="13dp"/>
+
+                <EditText
+                    android:id="@+id/namaWaliField"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:width="315sp"
+                    android:height="50sp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp" />
+
+                <TextView
+                    android:id="@+id/alamatWali"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Alamat Wali (Opsional)"
+                    android:textColor="#2D314C"
+                    android:textSize="16sp"
+                    android:layout_marginTop="13dp"/>
+
+                <EditText
+                    android:id="@+id/alamatWaliField"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:width="315sp"
+                    android:height="50sp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp" />
+
+                <TextView
+                    android:id="@+id/pekerjaanWali"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Pekerjaan Wali (Opsional)"
+                    android:textColor="#2D314C"
+                    android:textSize="16sp"
+                    android:layout_marginTop="13dp"/>
+
+                <EditText
+                    android:id="@+id/pekerjaanWaliField"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:width="315sp"
+                    android:height="50sp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="Upload File Pendukung"
+                    android:textColor="#2D314C"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Surat keterangan TK / Ijasah TK atau Akte Kelahiran / KK bilah ada"
+                    android:textSize="10sp" />
+
+                <ImageButton
+                    android:id="@+id/upload_image"
+                    android:layout_width="148dp"
+                    android:layout_height="162dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:background="@color/white"
+                    android:layout_marginTop="7dp"
+                    android:src="@drawable/upload_image" />
+
+                <Button
+                    android:id="@+id/button_lanjutkan"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="29dp"
+                    android:background="@drawable/rounded_rectangle_button"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="daftar"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="56dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
