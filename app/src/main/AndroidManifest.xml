@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -23,7 +23,6 @@
             android:exported="true"
             android:screenOrientation="portrait">
         </activity>
-
         <activity
             android:name=".PPDBClosedActivity"
             android:exported="true"
