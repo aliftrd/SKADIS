@@ -1,11 +1,13 @@
 package com.esdev.sikadis.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.esdev.sikadis.MainActivity;
 import com.esdev.sikadis.R;
 
 /**
@@ -14,7 +16,7 @@ import com.esdev.sikadis.R;
  * create an instance of this fragment.
  *
  */
-public class PendaftaranFragment extends Fragment {
+public class PendaftaranFragment extends Fragment implements View.OnClickListener{
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,5 +63,21 @@ public class PendaftaranFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_pendaftaran, container, false);
+    }
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.cv1:
+                Intent intent1 = new Intent(getContext(), MainActivity.class);
+                startActivity(intent1);
+                break;
+
+            case R.id.cv2:
+                Intent intent2 = new Intent(getContext(), MainActivity.class);
+                startActivity(intent2);
+                break;
+        }
+
+
     }
 }

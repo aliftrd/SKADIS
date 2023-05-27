@@ -1,5 +1,6 @@
 package com.esdev.sikadis.retrofit;
 
+import com.esdev.sikadis.responses.LayananResponse;
 import com.esdev.sikadis.responses.PostResponse;
 import com.esdev.sikadis.responses.SliderResponse;
 
@@ -16,4 +17,7 @@ public interface Api {
 
     @GET("sliders")
     Call<SliderResponse> getSliders();
+
+    @GET("meta")
+    Call<LayananResponse> getMeta();
 }
