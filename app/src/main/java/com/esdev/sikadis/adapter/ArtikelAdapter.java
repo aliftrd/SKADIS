@@ -58,12 +58,17 @@ public class ArtikelAdapter extends RecyclerView.Adapter<ArtikelAdapter.ArtikelV
     public void onBindViewHolder(@NonNull ArtikelViewHolder holder, int position) {
         PostResponse.Data post = postList.get(position);
         String title = post.getTitle();
-        if (title.length() > 30 ) {
-            title = title.substring(0, 30) + "...";
+        if (title.length() > 33) {
+            title = title.substring(0, 33) + " ...";
         }
         holder.titleTextView.setText(title);
 
-        holder.createdAtTextView.setText("Dibuat pada: " + post.getCreatedAt());
+        String articleCreatedAt = post.getCreatedAt();
+        Drawable timeIcon = context.getResources().getDrawable(R.drawable.ic_time_2);
+        timeIcon.setBounds(0, 0, timeIcon.getIntrinsicWidth(), timeIcon.getIntrinsicHeight());
+        holder.createdAtTextView.setCompoundDrawables(timeIcon, null, null, null);
+        holder.createdAtTextView.setCompoundDrawablePadding(5);
+        holder.createdAtTextView.setText(articleCreatedAt);
 
         ViewGroup.LayoutParams layoutParams = holder.thumbnailImageView.getLayoutParams();
         holder.thumbnailImageView.setLayoutParams(layoutParams);
@@ -129,6 +134,7 @@ public class ArtikelAdapter extends RecyclerView.Adapter<ArtikelAdapter.ArtikelV
             }
         }
     }
+
 
     private void loadNextPage() {
         Api api = ApiClient.getApiClient().create(Api.class);

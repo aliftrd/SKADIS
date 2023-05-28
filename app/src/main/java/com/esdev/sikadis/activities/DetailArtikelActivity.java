@@ -63,7 +63,9 @@ public class DetailArtikelActivity extends AppCompatActivity {
 
                 // Tampilkan data pada UI
                 titleTextView.setText(articleTitle);
-                createdAtTextView.setText("Dibuat pada: " + articleCreatedAt);
+                createdAtTextView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_time, 0, 0, 0);
+                createdAtTextView.setCompoundDrawablePadding(5);
+                createdAtTextView.setText(articleCreatedAt);
 
                 if (articleThumbnail != null && !articleThumbnail.isEmpty()) {
                     if (articleThumbnail.startsWith("http://")) {
@@ -100,5 +102,9 @@ public class DetailArtikelActivity extends AppCompatActivity {
             // Sembunyikan ProgressBar karena tidak ada data yang ditampilkan
             progressBar.setVisibility(View.GONE);
         }
+    }
+
+    public void onBackImageViewClick(View view) {
+        finish();
     }
 }

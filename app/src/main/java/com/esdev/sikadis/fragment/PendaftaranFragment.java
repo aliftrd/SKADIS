@@ -2,82 +2,91 @@ package com.esdev.sikadis.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
-import com.esdev.sikadis.MainActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+
+import com.esdev.sikadis.PPDBClosedActivity;
+import com.esdev.sikadis.PendaftaranSiswaActivity;
 import com.esdev.sikadis.R;
+import com.esdev.sikadis.activities.InfoPPDBActivity;
+import com.esdev.sikadis.responses.PpdbStatusResponse;
+import com.esdev.sikadis.retrofit.Api;
+import com.esdev.sikadis.retrofit.ApiClient;
+import com.esdev.sikadis.retrofit.Api;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link PendaftaranFragment#newInstance} factory method to
- * create an instance of this fragment.
- *
- */
-public class PendaftaranFragment extends Fragment implements View.OnClickListener{
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+public class PendaftaranFragment extends Fragment {
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private CardView cv1; // Updated variable type
+    private CardView cv2; // Added variable for "Panduan PPDB" card
+    private Api apiService;
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment PendaftaranFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static PendaftaranFragment newInstance(String param1, String param2) {
-        PendaftaranFragment fragment = new PendaftaranFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    public PendaftaranFragment() {
-        // Required empty public constructor
-    }
-
+    @Nullable
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_pendaftaran, container, false);
+
+        apiService = ApiClient.getApiClient().create(Api.class);
+        cv1 = view.findViewById(R.id.cv1); // Updated ID
+        cv2 = view.findViewById(R.id.cv2); // Added ID for "Panduan PPDB" card
+
+        cv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getPpdbStatusFromApi();
+            }
+        });
+
+        cv2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), InfoPPDBActivity.class));
+            }
+        });
+
+        return view;
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pendaftaran, container, false);
-    }
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.cv1:
-                Intent intent1 = new Intent(getContext(), MainActivity.class);
-                startActivity(intent1);
-                break;
+    private void getPpdbStatusFromApi() {
+        Call<PpdbStatusResponse> call = apiService.getPpdbStatus();
+        call.enqueue(new Callback<PpdbStatusResponse>() {
+            @Override
+            public void onResponse(Call<PpdbStatusResponse> call, Response<PpdbStatusResponse> response) {
+                if (response.isSuccessful()) {
+                    PpdbStatusResponse ppdbStatusResponse = response.body();
+                    if (ppdbStatusResponse != null && ppdbStatusResponse.isSuccess()) {
+                        PpdbStatusResponse.PpdbStatusData ppdbStatusData = ppdbStatusResponse.getData();
+                        int status = ppdbStatusData.getStatus();
+                        int ppdb = ppdbStatusData.getPpdb();
 
-            case R.id.cv2:
-                Intent intent2 = new Intent(getContext(), MainActivity.class);
-                startActivity(intent2);
-                break;
-        }
+                        if (status == 1) {
+                            if (ppdb == 1) {
+                                startActivity(new Intent(getActivity(), PendaftaranSiswaActivity.class));
+                            } else {
+                                startActivity(new Intent(getActivity(), PPDBClosedActivity.class));
+                            }
+                        } else {
+                            startActivity(new Intent(getActivity(), PPDBClosedActivity.class));
+                        }
+                    }
+                }
+            }
 
-
+            @Override
+            public void onFailure(Call<PpdbStatusResponse> call, Throwable t) {
+                Toast.makeText(getActivity(), "Gagal memuat status PPDB", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

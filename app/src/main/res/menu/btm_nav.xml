@@ -10,11 +10,6 @@
         android:title="Pendaftaran" />
 
     <item
-        android:id="@+id/menu_raport"
-        android:icon="@drawable/ic_notebook"
-        android:title="Raport" />
-
-    <item
         android:id="@+id/menu_layanan"
         android:icon="@drawable/ic_phone"
         android:title="Layanan" />
