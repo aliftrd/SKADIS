@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_info_ppdb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Info PPDB"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/backImageView"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:contentDescription="Arrow Back"
+        android:onClick="onBackImageViewClick"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tahapan_pendaftaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tahapan Pendaftaran Siswa Baru"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="102dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline4" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline5"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginTop="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:text="Tahap Pertama"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="241dp" />
+
+
+            <ImageView
+                android:id="@+id/gambar1"
+                android:layout_width="375dp"
+                android:layout_height="250dp"
+                android:src="@drawable/img_placeholder"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:text="Tahap Pertama"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="241dp" />
+
+            <ImageView
+                android:id="@+id/gambar2"
+                android:layout_width="375dp"
+                android:layout_height="250dp"
+                android:src="@drawable/img_placeholder"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:text="Tahap Pertama"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="241dp" />
+
+            <ImageView
+                android:id="@+id/gambar3"
+                android:layout_width="375dp"
+                android:layout_height="250dp"
+                android:src="@drawable/img_placeholder"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:text="Tahap Pertama"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="241dp" />
+
+            <ImageView
+                android:id="@+id/gambar4"
+                android:layout_width="375dp"
+                android:layout_height="250dp"
+                android:src="@drawable/img_placeholder"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:text="Tahap Pertama"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="241dp" />
+
+            <ImageView
+                android:id="@+id/gambar5"
+                android:layout_width="375dp"
+                android:layout_height="250dp"
+                android:src="@drawable/img_placeholder"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:text="Tahap Pertama"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="241dp" />
+
+            <ImageView
+                android:id="@+id/gambar6"
+                android:layout_width="375dp"
+                android:layout_height="250dp"
+                android:src="@drawable/img_placeholder"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="61dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="104dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="129dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

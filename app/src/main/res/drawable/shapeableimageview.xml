@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="RoundedImageViewStyle" parent="Widget.MaterialComponents.ImageView">
+        <item name="shapeAppearance">@style/RoundedCornerShapeAppearance</item>
+    </style>
+
+    <style name="RoundedCornerShapeAppearance">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+
+</selector>
