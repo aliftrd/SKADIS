@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import com.esdev.sikadis.fragment.BerandaFragment;
 import com.esdev.sikadis.fragment.LayananFragment;
 import com.esdev.sikadis.fragment.PendaftaranFragment;
-import com.esdev.sikadis.fragment.RaportFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,9 +33,6 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.menu_pendaftaran:
                         selectedFragment = new PendaftaranFragment();
-                        break;
-                    case R.id.menu_raport:
-                        selectedFragment = new RaportFragment();
                         break;
                     case R.id.menu_layanan:
                         selectedFragment = new LayananFragment();
