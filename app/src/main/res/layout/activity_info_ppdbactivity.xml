@@ -11,12 +11,12 @@
         android:id="@+id/tv_info_ppdb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
         android:padding="16dp"
-        android:text="Info PPDB"
-        android:textStyle="bold"
+        android:text="PENDAFTARAN PPDB"
         android:textColor="#000"
         android:textSize="16sp"
-        android:fontFamily="sans-serif"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,40 +25,28 @@
 
     <ImageView
         android:id="@+id/backImageView"
-        android:layout_width="24dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_width="28dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="321dp"
         android:contentDescription="Arrow Back"
         android:onClick="onBackImageViewClick"
         android:src="@drawable/baseline_arrow_back_24"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_tahapan_pendaftaran"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tahapan Pendaftaran Siswa Baru"
-        android:textColor="#000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginStart="7dp"
-        android:layout_marginEnd="102dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideline4" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline5"
-        app:layout_constraintVertical_bias="0.0"
-        android:layout_marginTop="10dp">
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="1.0">
 
 
         <LinearLayout
@@ -68,107 +56,254 @@
 
 
             <TextView
+                android:id="@+id/text15"
+                android:layout_width="252dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="241dp"
+                android:text="TAHAPAN PENDAFTARAN PPDB"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/text1"
                 android:layout_width="241dp"
                 android:layout_height="wrap_content"
-                android:text="Tahap Pertama"
-                android:textStyle="bold"
-                android:layout_marginTop="25dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginEnd="241dp" />
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="241dp"
+                android:text="Tahap Pertama"
+                android:textColor="#000000"
+                android:textStyle="bold" />
 
+
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="293dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="241dp"
+                android:text="Tekan Tombol PPDB untuk mendaftar"
+                android:textColor="#000000"
+                android:textStyle="normal" />
 
             <ImageView
                 android:id="@+id/gambar1"
                 android:layout_width="375dp"
                 android:layout_height="250dp"
-                android:src="@drawable/img_placeholder"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ppdb_info_1" />
 
             <TextView
                 android:id="@+id/text2"
                 android:layout_width="241dp"
                 android:layout_height="wrap_content"
-                android:text="Tahap Pertama"
-                android:textStyle="bold"
-                android:layout_marginTop="25dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginEnd="241dp" />
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="241dp"
+                android:text="Tahap Ke dua"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text8"
+                android:layout_width="357dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="241dp"
+                android:text="Bila ingin mengisi tekan kotak abu-abu dan Isi sesuai dengan Apa yang tertera Seperti NIK, Nama Lengkap Anak, Tempat Lahir Dan Tanggal Lahir"
+                android:textColor="#000000" />
 
             <ImageView
                 android:id="@+id/gambar2"
                 android:layout_width="375dp"
                 android:layout_height="250dp"
-                android:src="@drawable/img_placeholder"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ppdb_info_2" />
 
             <TextView
                 android:id="@+id/text3"
-                android:layout_width="241dp"
+                android:layout_width="342dp"
                 android:layout_height="wrap_content"
-                android:text="Tahap Pertama"
-                android:textStyle="bold"
-                android:layout_marginTop="25dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginEnd="241dp" />
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="241dp"
+                android:text="Setelah itu lanjut untuk mengisi dibawah ini yang sesuai untuk Tanggal Lahir anak, Jenis kelamin anak, dan Agama anak"
+                android:textColor="#000000"
+                android:textStyle="normal" />
 
             <ImageView
                 android:id="@+id/gambar3"
                 android:layout_width="375dp"
                 android:layout_height="250dp"
-                android:src="@drawable/img_placeholder"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ppdb_info_3" />
 
             <TextView
                 android:id="@+id/text4"
-                android:layout_width="241dp"
+                android:layout_width="348dp"
                 android:layout_height="wrap_content"
-                android:text="Tahap Pertama"
-                android:textStyle="bold"
-                android:layout_marginTop="25dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginEnd="241dp" />
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="241dp"
+                android:text="'Untuk yang bertuliskan Opsional Itu tidak wajib di isi' Selanjutnya Isi Untuk Nama Ayah, Pekerjaan Ayah, Nama Ibu, Pekerjaan Ibu(Opsional/Tidak harus diisi), Alamat"
+                android:textColor="#000000"
+                android:textStyle="normal" />
 
             <ImageView
                 android:id="@+id/gambar4"
                 android:layout_width="375dp"
                 android:layout_height="250dp"
-                android:src="@drawable/img_placeholder"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ppdb_info_4" />
 
             <TextView
                 android:id="@+id/text5"
-                android:layout_width="241dp"
+                android:layout_width="352dp"
                 android:layout_height="wrap_content"
-                android:text="Tahap Pertama"
-                android:textStyle="bold"
-                android:layout_marginTop="25dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginEnd="241dp" />
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="241dp"
+                android:text="'Untuk Opsional Tidak wajib diisi' Bila Tidak memiliki Wali Boleh di kosongi"
+                android:textColor="#000000"
+                android:textStyle="normal" />
 
             <ImageView
                 android:id="@+id/gambar5"
                 android:layout_width="375dp"
                 android:layout_height="250dp"
-                android:src="@drawable/img_placeholder"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ppdb_info_5" />
 
             <TextView
                 android:id="@+id/text6"
-                android:layout_width="241dp"
+                android:layout_width="342dp"
                 android:layout_height="wrap_content"
-                android:text="Tahap Pertama"
-                android:textStyle="bold"
-                android:layout_marginTop="25dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginEnd="241dp" />
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="241dp"
+                android:text="Selanjutnya Masukkan salah satu File pendukung berupa gambar untuk File bisa memasukkan Akte Kelahiran/KK atau Surat keterangan TK/ Ijazah TK        bila ada"
+                android:textColor="#000000"
+                android:textStyle="normal" />
 
             <ImageView
                 android:id="@+id/gambar6"
-                android:layout_width="375dp"
+                android:layout_width="354dp"
                 android:layout_height="250dp"
-                android:src="@drawable/img_placeholder"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ppdb_info_6" />
+
+            <TextView
+                android:id="@+id/text9"
+                android:layout_width="318dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="241dp"
+                android:text="Setelah Upload File Pendukun di buka maka akan muncul tampilan sebagai berikut untuk mengirim gambar yang udah tertera"
+                android:textColor="#000000"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/gambar7"
+                android:layout_width="379dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ppdb_info_7" />
+
+            <TextView
+                android:id="@+id/text10"
+                android:layout_width="309dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="241dp"
+                android:text="Setelah menambahkan file pendukung maka kan  muncul gambar yang dipilih"
+                android:textColor="#000000"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/gambar8"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ppdb_info_8" />
+
+            <TextView
+                android:id="@+id/text11"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="241dp"
+                android:text="Setelah menambahkan yang diperlukan buat mendaftar dapat langsung menekan tombol Daftar"
+                android:textColor="#000000"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/gambar9"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ppdb_info_9" />
+
+            <TextView
+                android:id="@+id/text12"
+                android:layout_width="326dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="241dp"
+                android:text="Setelah menekan tombol daftar akan ada konfirmasi lagi apakah data yang ditambahkan sudah benar atau belum bila belum yakin tekan Tidak dan bila sudah yakin tekan tombil Ya"
+                android:textColor="#000000"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/gambar"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ppdb_info_10" />
+
+            <TextView
+                android:id="@+id/text13"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="241dp"
+                android:text="Bila sudah selesai menambahkan data maka akan mengarah ke tombol awal Pendaftaran siswa"
+                android:textColor="#000000"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/gambar10"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ppdb_info_11" />
+
+            <TextView
+                android:id="@+id/text14"
+                android:layout_width="316dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="241dp"
+                android:text="Bila terdapat layar seperti ini maka PPDBnya di tutup"
+                android:textColor="#000000"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/gambar11"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ppdb_info_12" />
 
         </LinearLayout>
 
@@ -193,6 +328,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="129dp" />
+        app:layout_constraintGuide_end="602dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
