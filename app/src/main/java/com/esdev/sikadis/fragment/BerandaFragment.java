@@ -47,7 +47,6 @@ public class BerandaFragment extends Fragment {
     private ViewPager sliderViewPager;
     private Timer sliderTimer;
     private int currentPage = 0;
-
     private String nextPageUrl = null;
     private boolean isLoading = false;
 
