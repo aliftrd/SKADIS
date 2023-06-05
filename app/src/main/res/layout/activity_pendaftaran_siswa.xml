@@ -260,7 +260,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="13dp"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Pekerjaan Ibu (Opsional)"
+                    android:text="Pekerjaan Ibu"
                     android:textColor="#2D314C"
                     android:textSize="16sp" />
 
